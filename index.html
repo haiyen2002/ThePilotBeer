@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiLot Home</title>
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- animate -->
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- aos -->
+    <link rel="stylesheet" href="./assets/aos-master/dist/aos.css" />
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-inner">
+          <div class="header-inner_content">
+            <div class="header-inner_nav">
+              <div class="mobile-nav" onclick="openMobileNav()">
+                <i class="bx bx-menu"></i>
+              </div>
+              <div class="header-nav_left">
+                <div class="main-logo">
+                  <a href="">
+                    <img src="./assets/img/logo.PNG" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="header-nav_right">
+                <div class="nav-item">
+                  <a class="nav-item_link active" href="#">Home</a>
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./views/pages/filter.html"
+                    >Beer</a
+                  >
+                  <ul class="nav-item_dropdown">
+                    <li><a href="">Popular Beer</a></li>
+                    <li><a href="">New Beer</a></li>
+                    <li><a href="">Hot Beer</a></li>
+                  </ul>
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./views/pages/food.html"
+                    >Food</a
+                  >
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./views/pages/about.html">About</a>
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./views/pages/contact.html">Contact</a>
+                </div>
+                <div class="close-mobile-nav" onclick="closeMobileNav()">
+                  <i class="bx bx-x"></i>
+                </div>
+              </div>
+              <div class="header-nav_user">
+                <a class="btn btn-login" href="./views/pages/login.html">
+                  <span class="user-icon"
+                    ><i class="bx bxs-user-circle"></i
+                  ></span>
+                  <span>Login</span>
+                </a>
+                <div class="favourite">
+                  <i class="bx bxs-heart-circle"></i>
+                  <div class="favourite-list"></div>
+                </div>
+              </div>
+            </div>
+            <div class="header-inner_banner">
+              <div class="grid-row">
+                <div class="grid-col grid-col-5">
+                  <div class="grid-col_content">
+                    <div class="header-banner_heading">
+                      Modern Beer Technology No. 1 - The Pilot
+                    </div>
+                    <div class="header-banner_title">
+                      <h2>
+                        Handmade beer <br />
+                        <span class="yellow">The Pilot</span>
+                      </h2>
+                    </div>
+                    <div class="header-banner_des">
+                      <p>
+                        Manufactured by Polyco Corporation - Contractor to build
+                        famous domestic and international beer and soft drink
+                        manufacturing projects such as TH-Truemilk, Vinamilk,
+                        Coca-Cola, Saigon Beer, Heniken Beer, etc. The Pilot now
+                        boasts a state-of-the-art production system.
+                      </p>
+                    </div>
+                    <div class="header-banner_button">
+                      <a href="" class="order-btn btn">Order Now</a>
+                      <span>opening <u>12/10/2021</u></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-col grid-col-7">
+                  <div class="grid-col_content">
+                    <div class="banner-image">
+                      <img
+                        class="banner-image_large"
+                        src="./assets/img/biavanuoc__1_-removebg-preview.png"
+                        alt=""
+                        data-aos="fade-left"
+                      />
+                      <img
+                        class="banner-image_small"
+                        src="./assets/img/biakhongnuoc-removebg-preview (2).jpg"
+                        alt=""
+                        data-aos="fade-right"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="banner-inner">
+          <div class="banner-item animate__fadeInLeft">
+            <img
+              src="./assets/img/bannerleft.png"
+              alt=""
+            />
+            <div class="banner-item_overlay">
+              <div class="banner-item-overlay_inner">
+                <a href="./views/pages/filter.html">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="banner-item animate__fadeInRight">
+            <img
+              src="https://i.pinimg.com/736x/bb/9e/db/bb9edbd83ebd2bf8132a7e1c84a2fb0d.jpg"
+              alt=""
+            />
+            <div class="banner-item_overlay">
+              <div class="banner-item-overlay_inner">
+                <a href="./views/pages/filter.html">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider" data-aos="fade-left">
+        <h2 class="slider-title">Popular</h2>
+        <div class="popular-product_list owl-carousel"></div>
+      </div>
+      <div class="section info">
+        <div class="section-inner">
+          <div class="section-body">
+            <div class="flex">
+              <div class="grid-col-6 info-item" data-aos="fade-right">
+                <div
+                  class="info-item left"
+                  style="
+                    background: linear-gradient(
+                      var(--grey),
+                      var(--black-color)
+                    );
+                  "
+                >
+                  <img src="./assets/img/3chaibia.png" alt="" />
+                </div>
+              </div>
+              <div
+                class="grid-col-6 auto-center info-item"
+                data-aos="fade-left"
+              >
+                <div class="info-item flex">
+                  <div class="flex">
+                    <div class="grid-col-6 item">
+                      <div class="info-item_element">
+                        <div class="info-element_icon">
+                          <img src="./assets/icon/quathong.PNG" alt="" />
+                        </div>
+                        <div class="info-element_title">Malt</div>
+                        <div class="info-element_desc">
+                          Selected from a reputable supplier, the starch is
+                          tested for each grain before entering the blender.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-col-6 item">
+                      <div class="info-item_element">
+                        <div class="info-element_icon">
+                          <img src="./assets/icon/mattroi.PNG" alt="" />
+                        </div>
+                        <div class="info-element_title">Beer Flowers</div>
+                        <div class="info-element_desc">
+                          From the countryside where quality beer flowers are
+                          grown, beer flowers are harvested from 1 to 3 a.m. to
+                          ensure a different taste when cooking handmade beer.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-col-6 item">
+                      <div class="info-item_element">
+                        <div class="info-element_icon">
+                          <img src="./assets/icon/guong.PNG" alt="" />
+                        </div>
+                        <div class="info-element_title">Beer recipe</div>
+                        <div class="info-element_desc">
+                          Conquer even the most demanding customers with recipes
+                          studied and supervised by leading experts in Food
+                          Technology.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-col-6 item">
+                      <div class="info-item_element">
+                        <div class="info-element_icon">
+                          <img src="./assets/icon/bachaibia.PNG" alt="" />
+                        </div>
+                        <div class="info-element_title">Modern production</div>
+                        <div class="info-element_desc">
+                          Conducted by leading engineers of Polyco Group - the
+                          contractor of major beer and beverage projects
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section statistics" data-aos="fade-left">
+        <div class="section-body">
+          <div class="flex">
+            <div class="grid-col-3 item-none">
+              <div class="statistics-item">
+                <div class="statistics-item_icon">
+                  <img src="./assets/icon/quathong.PNG" alt="" />
+                </div>
+                <div class="statistics-item_number first"></div>
+                <div class="statistics-item_name">happy customers</div>
+              </div>
+            </div>
+            <div class="grid-col-3 item-none">
+              <div class="statistics-item">
+                <div class="statistics-item_icon">
+                  <img src="./assets/icon/caily.PNG" alt="" />
+                </div>
+                <div class="statistics-item_number second"></div>
+                <div class="statistics-item_name">awards won</div>
+              </div>
+            </div>
+            <div class="grid-col-3 item-none">
+              <div class="statistics-item">
+                <div class="statistics-item_icon">
+                  <img src="./assets/icon/cocnuoc.PNG" alt="" />
+                </div>
+                <div class="statistics-item_number third"></div>
+                <div class="statistics-item_name">working members</div>
+              </div>
+            </div>
+            <div class="grid-col-3 item-none">
+              <div class="statistics-item">
+                <div class="statistics-item_icon">
+                  <img src="./assets/icon/buonglua.PNG" alt="" />
+                </div>
+                <div class="statistics-item_number fourth"></div>
+                <div class="statistics-item_name">branches</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about" data-aos="fade-down">
+        <div class="about-inner">
+          <div class="about-inner_content">
+            <h3 class="about-title">History</h3>
+            <p class="about-desc">
+              The Pilot's craft beer system was implemented by Cha, the father
+              of Beer Technology - Professor. Dr. Dinh Van Thuan. His desire to
+              make The Pilot a place for Food Technology industry experts to
+              fully research and to produce students with the research and
+              manufacturing experience that businesses need.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-container" data-aos="fade-right">
+        <div class="progress-bar"></div>
+        <p class="testimonial">
+          With the cold weather in Hanoi's evening these days, it's a great
+          experience to have a wine sauce with fresh beef - the taste of the
+          northern winter season! The savory, round, and savory taste of the
+          sauce comes from the crispness of the shredded breads combined with an
+          appetizing sauce, fresh vegetables, soft, and hot fat beef.
+        </p>
+        <div class="user">
+          <img src="./assets/img/testimo_1.jpg" alt="user" class="user-image" />
+          <div class="user-details">
+            <h4 class="username">Miyah Myles</h4>
+            <p class="role">Marketing</p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer" data-aos="fade-left">
+        <div class="footer-container">
+          <div class="grid-row">
+            <div class="grid-col grid-col-3 m-grid-col-6">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <div class="footer-logo">
+                    <img
+                      src="./assets/img/logo.PNG"
+                      alt=""
+                      class="footer-logo__img"
+                    />
+                    <span class="footer-logo__name">Pilot</span>
+                  </div>
+                </div>
+                <div class="footer-item__content">
+                  <p>
+                    The University of East Asian Technology, headquartered at
+                    Polyco building Trinh Van Bo Street, Phuong Hoang, Nam Tu
+                    Liem, Hanoi, has opened its restaurant "The Pilot."
+                  </p>
+                  <div class="footer__about-social-list">
+                    <a href="" class="footer__about-social-link">
+                      <i class="bx bxl-pinterest"></i>
+                    </a>
+                    <a href="" class="footer__about-social-link">
+                      <i class="bx bxl-facebook-circle"></i>
+                    </a>
+                    <a href="" class="footer__about-social-link">
+                      <i class="bx bxl-twitter"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col grid-col-3 m-grid-col-6 c-12">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <h4>News</h4>
+                </div>
+                <div class="footer-item__content footer-blog">
+                  <div class="footer-blog-item">
+                    <img
+                      src="./assets/img/news_1.jpg"
+                      alt=""
+                      class="footer-blog-item__img"
+                    />
+                    <div class="footer-blog-item__content">
+                      <h6 class="footer-blog-item__name">
+                        Relax with us this year
+                      </h6>
+                      <span class="footer-blog-item__date">July 20, 2021</span>
+                    </div>
+                  </div>
+                  <div class="footer-blog-item">
+                    <img
+                      src="./assets/img/news_2.jpg"
+                      alt=""
+                      class="footer-blog-item__img"
+                    />
+                    <div class="footer-blog-item__content">
+                      <h6 class="footer-blog-item__name">
+                        Drink with us this year
+                      </h6>
+                      <span class="footer-blog-item__date">July 20, 2021</span>
+                    </div>
+                  </div>
+                  <div class="footer-blog-item">
+                    <img
+                      src="./assets/img/news_3.jpg"
+                      alt=""
+                      class="footer-blog-item__img"
+                    />
+                    <div class="footer-blog-item__content">
+                      <h6 class="footer-blog-item__name">
+                        Travel with us this year
+                      </h6>
+                      <span class="footer-blog-item__date">July 20, 2021</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col grid-col-3 m-grid-col-6">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <h4>tags</h4>
+                </div>
+                <div class="footer-item__content">
+                  <a href="" class="footer-tag__link">beer</a>
+                  <a href="" class="footer-tag__link">pilot</a>
+                  <a href="" class="footer-tag__link">the pilot</a>
+                  <a href="" class="footer-tag__link">polyco</a>
+                  <a href="" class="footer-tag__link">eaut</a>
+                  <a href="" class="footer-tag__link">dong a</a>
+                  <a href="" class="footer-tag__link">drinks</a>
+                  <a href="" class="footer-tag__link">relax</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col grid-col-3 m-grid-col-6">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <h4>CONTACT INFO</h4>
+                </div>
+                <div class="footer-item__content">
+                  <div class="footer-info-item">
+                    <i class="bx bx-map"></i>
+                    <a href="" class="footer-info-item__content">DHCN Đông Á</a>
+                  </div>
+                  <div class="footer-info-item">
+                    <i class="bx bxs-phone-call"></i>
+                    <a href="" class="footer-info-item__content"
+                      >+84 999 999 999</a
+                    >
+                  </div>
+                  <div class="footer-info-item">
+                    <i class="bx bx-mail-send"></i>
+                    <a href="" class="footer-info-item__content"
+                      >eaut@gmail.com</a
+                    >
+                  </div>
+                  <div class="footer-info-item">
+                    <i class="bx bx-globe"></i>
+                    <a href="" class="footer-info-item__content"
+                      >www.elearning.edu.vn</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            Design © 2021 By
+            <a href="" class="footer-copyright__link">Tran Thi Hai Yen</a>
+          </div>
+        </div>
+      </footer>
+      <div class="goTop hide" onclick="topFunction()">
+        <i class='bx bx-chevrons-up'></i>
+      </div>
+    </div>
+    <div class="loading-page bg">
+      <h1>
+        <span class="let1">l</span>  
+        <span class="let2">o</span>  
+        <span class="let3">a</span>  
+        <span class="let4">d</span>  
+        <span class="let5">i</span>  
+        <span class="let6">n</span>  
+        <span class="let7">g</span>  
+      </h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/aos-master/dist/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/home.js"></script>
+  </body>
+</html>

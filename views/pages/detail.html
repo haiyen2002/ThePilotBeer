@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiLot Menu</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/detail.css" />
+    <link rel="stylesheet" href="../../assets/css/filter.css">
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+  </head>
+
+  <body>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-content_order">
+        
+        </div>
+      </div>
+    
+    </div>
+    
+    <!--  -->
+    <div class="container">
+      <div class="header">
+        <div class="header-inner">
+          <div class="header-inner_content">
+            <div class="header-inner_nav p13">
+              <div class="mobile-nav" onclick="openMobileNav()">
+                <i class="bx bx-menu"></i>
+              </div>
+              <div class="header-nav_left">
+                <div class="main-logo">
+                  <img src="../../assets/img/logo.PNG" alt="" />
+                </div>
+              </div>
+              <div class="header-nav_right">
+                <div class="nav-item">
+                  <a class="nav-item_link" href="../../index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                <a class="nav-item_link" href="./filter.html">Beer</a>
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./food.html">Food</a>
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./about.html">About</a>
+                </div>
+                <div class="nav-item">
+                  <a class="nav-item_link" href="./contact.html">Contact</a>
+                </div>
+                <div class="close-mobile-nav" onclick="closeMobileNav()">
+                  <i class="bx bx-x"></i>
+                </div>
+              </div>
+              <div class="header-nav_user">
+                <a class="btn btn-login" href="./login.html">
+                  <span class="user-icon"
+                    ><i class="bx bxs-user-circle"></i
+                  ></span>
+                  <span>Login</span>
+                </a>
+                <div class="favourite">
+                  <i class="bx bxs-heart-circle"></i>
+                  <div class="favourite-list"></div>
+                </div>
+              </div>
+            </div>
+            <div class="header-inner_banner" style="margin-top: 30px">
+              <div class="grid-row detail-container">
+                <div class="grid-col grid-col-8 detail-left animate__fadeInLeft">
+                  <div class="detail-composition detail-side">
+                    <div class="detail-tags">#Thisisliving</div>
+                    <p class="detail-desc">Pushing the boundaries of barrel-aged stouts is in our DNA, and with that, we brought to life our first-ever cola-inspired variant.</p>
+                    <div class="detail-brand">Black Beer</div>
+                    <div class="detail-origin">Brewed and bouled by <br> <strong>Cervecerio Modelo Mexico</strong></strong></div>
+                    <div class="detail-year">2021</div>
+                  </div>
+                  <div class="detail-main-image">
+                    <div class="zoomer">
+                      <div class="detail-main-img image">
+                        <img src="" alt="">
+                      </div>
+                      <div class="result hide"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-col grid-col-4 animate__fadeInRight">
+                  <div class="detail-main-info detail-side">
+                    <div class="detail-name">Corona Extra Black</div>
+                  <div class="detail-select">
+                    <div class="detail-select_item">
+                      <div class="detail-select-item_img">
+                        <i class="fas fa-wine-bottle"></i>
+                      </div>
+                      <div class="detail-select-item_name">Single</div>
+                      <div class="detail-select-item_price">$4.15$</div>
+                    </div>
+                    <div class="detail-select_item">
+                      <div class="detail-select-item_img">
+                        <i class="fas fa-wine-bottle"></i>
+                        <i class="fas fa-wine-bottle"></i>
+                        <i class="fas fa-wine-bottle"></i>
+                      </div>
+                      <div class="detail-select-item_name">Pack</div>
+                      <div class="detail-select-item_price">$24.9$</div>
+                    </div>
+                    <div class="detail-select_item">
+                      <div class="detail-select-item_img">
+                        <i class="fas fa-wine-bottle"></i>
+                        <i class="fas fa-wine-bottle"></i>
+                        <i class="fas fa-wine-bottle"></i>
+                        <i class="fas fa-wine-bottle"></i>
+                        <i class="fas fa-wine-bottle"></i>
+                      </div>
+                      <div class="detail-select-item_name">Company</div>
+                      <div class="detail-select-item_price">$99.6$</div>
+                    </div>
+                  </div>
+                  <div class="detail-price">$4.15</div>
+                  <div class="detail-info">-One Bottle 330 ml</div>
+                  <div class="detail-action">
+                    <div class="quantity-select">
+                      <div class="quantity-option" onclick="plus(-1)">
+                        <i class='bx bx-minus'></i>
+                      </div>
+                      <div class="quantity-option quantity-show">
+                        
+                      </div>
+                      <div class="quantity-option" onclick="plus(1)">
+                        <i class='bx bx-plus'></i>
+                      </div>
+                    </div>
+                    <button onclick="handleOrder()" id="myBtn" class="order-button">Order</button>
+                  </div>
+                  </div>
+                </div>
+                <div class="img-list">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- ad-slider -->
+            <h2 class="slider-title animate__fadeInLeft">Why Choose Us</h2>
+            <div class="slider-container" data-aos="fade-right">
+              <div class="left-slide">
+                <div class="ad_first" style="background-color: #412706">
+                  <h1>CATERING SERVICE</h1>
+                  <p>Our beer also provides an outstanding catering service for events and special occasions.</p>
+                </div>
+                <div class="ad_second" style="background-color: #6b534d">
+                  <h1>FREE DELIVERY</h1>
+                  <p>All orders submitted by our Ha Noi clients are delivered for free throughout the Ha Noi City.</p>
+                </div>
+                <div class="ad_fourth" style="background-color: #aa5d2b">
+                  <h1>QUALITY PRODUCTS</h1>
+                  <p>We guarantee the quality of all the beers we provide as they are baked using the freshest ingredients</p>
+                </div>
+                <div class="ad_third" style="background-color: #252E33">
+                  <h1>ONLINE PAYMENT</h1>
+                  <p>We accept all kinds of online payments including Visa, MasterCard, American Express credit cards.</p>
+                </div>
+              </div>
+              <div class="right-slide">
+                <div style="background-image: url('../../assets/img/ad_1.jpg')"></div>
+                <div style="background-image: url('../../assets/img/ad_2.jpeg')"></div>
+                <div style="background-image: url('../../assets/img/ad_3.webp')"></div>
+                <div style="background-image: url('../../assets/img/ad_4.jpg')"></div>
+              </div>
+              <div class="action-buttons">
+                <button class="down-button">
+                  <i class="fas fa-arrow-down"></i>
+                </button>
+                <button class="up-button">
+                  <i class="fas fa-arrow-up"></i>
+                </button>
+              </div>
+            </div>
+      <!-- content -->
+      <div class="slider" data-aos="fade-right">
+        <h2 class="slider-title">More Discovery</h2>
+        <div class="popular-product_list owl-carousel">
+          
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer" data-aos="fade-left">
+        <div class="footer-container">
+          <div class="grid-row">
+            <div class="grid-col grid-col-3 m-grid-col-6">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <div class="footer-logo">
+                    <img
+                      src="../../assets/img/logo.PNG"
+                      alt=""
+                      class="footer-logo__img"
+                    />
+                    <span class="footer-logo__name">Pilot</span>
+                  </div>
+                </div>
+                <div class="footer-item__content">
+                  <p>
+                    The University of East Asian Technology, headquartered at
+                    Polyco building Trinh Van Bo Street, Phuong Hoang, Nam Tu
+                    Liem, Hanoi, has opened its restaurant "The Pilot."
+                  </p>
+                  <div class="footer__about-social-list">
+                    <a href="" class="footer__about-social-link">
+                      <i class="bx bxl-pinterest"></i>
+                    </a>
+                    <a href="" class="footer__about-social-link">
+                      <i class="bx bxl-facebook-circle"></i>
+                    </a>
+                    <a href="" class="footer__about-social-link">
+                      <i class="bx bxl-twitter"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col grid-col-3 m-grid-col-6 c-12">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <h4>News</h4>
+                </div>
+                <div class="footer-item__content footer-blog">
+                  <div class="footer-blog-item">
+                    <img
+                      src="../../assets/img/news_1.jpg"
+                      alt=""
+                      class="footer-blog-item__img"
+                    />
+                    <div class="footer-blog-item__content">
+                      <h6 class="footer-blog-item__name">
+                        Relax with us this year
+                      </h6>
+                      <span class="footer-blog-item__date">July 20, 2021</span>
+                    </div>
+                  </div>
+                  <div class="footer-blog-item">
+                    <img
+                      src="../../assets/img/news_2.jpg"
+                      alt=""
+                      class="footer-blog-item__img"
+                    />
+                    <div class="footer-blog-item__content">
+                      <h6 class="footer-blog-item__name">
+                        Drink with us this year
+                      </h6>
+                      <span class="footer-blog-item__date">July 20, 2021</span>
+                    </div>
+                  </div>
+                  <div class="footer-blog-item">
+                    <img
+                      src="../../assets/img/news_3.jpg"
+                      alt=""
+                      class="footer-blog-item__img"
+                    />
+                    <div class="footer-blog-item__content">
+                      <h6 class="footer-blog-item__name">
+                        Travel with us this year
+                      </h6>
+                      <span class="footer-blog-item__date">July 20, 2021</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col grid-col-3 m-grid-col-6">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <h4>tags</h4>
+                </div>
+                <div class="footer-item__content">
+                  <a href="" class="footer-tag__link">beer</a>
+                  <a href="" class="footer-tag__link">pilot</a>
+                  <a href="" class="footer-tag__link">the pilot</a>
+                  <a href="" class="footer-tag__link">polyco</a>
+                  <a href="" class="footer-tag__link">eaut</a>
+                  <a href="" class="footer-tag__link">dong a</a>
+                  <a href="" class="footer-tag__link">drinks</a>
+                  <a href="" class="footer-tag__link">relax</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid-col grid-col-3 m-grid-col-6">
+              <div class="footer-item">
+                <div class="footer-item__name">
+                  <h4>CONTACT INFO</h4>
+                </div>
+                <div class="footer-item__content">
+                  <div class="footer-info-item">
+                    <i class="bx bx-map"></i>
+                    <a href="" class="footer-info-item__content">DHCN Đông Á</a>
+                  </div>
+                  <div class="footer-info-item">
+                    <i class="bx bxs-phone-call"></i>
+                    <a href="" class="footer-info-item__content"
+                      >+84 999 999 999</a
+                    >
+                  </div>
+                  <div class="footer-info-item">
+                    <i class="bx bx-mail-send"></i>
+                    <a href="" class="footer-info-item__content"
+                      >eaut@gmail.com</a
+                    >
+                  </div>
+                  <div class="footer-info-item">
+                    <i class="bx bx-globe"></i>
+                    <a href="" class="footer-info-item__content"
+                      >www.elearning.edu.vn</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            Design © 2021 By
+            <a href="" class="footer-copyright__link">Tran Thi Hai Yen</a>
+          </div>
+        </div>
+      </footer>
+      <div class="goTop hide" onclick="topFunction()">
+        <i class='bx bx-chevrons-up'></i>
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../assets/js/owl.carousel.min.js"></script>
+    <script src="../../assets/aos-master/dist/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/detail.js"></script>
+</body>
+</html>

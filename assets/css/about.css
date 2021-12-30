@@ -1,0 +1,65 @@
+.about-video {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about {
+    background-image: url('../../assets/img/foods/home-bottom-shape.png');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#about img {
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+
+.about-slogan {
+    padding: 4rem;
+    background-color: var(--white-food);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.about-slogan h3 {
+    line-height: 1.4;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--yellow);
+}
+
+.about-slogan p {
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.review-image img{
+    border-radius: 20px;
+}
+
+.title {
+    text-align: center;
+    color: var(--yellow);
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@media screen and(max-width: 767px) {
+    .col-7.col-s-12 {
+        width: 100%;
+    }
+
+    section {
+        padding: 0;
+    }
+}

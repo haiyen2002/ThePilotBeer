@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-inner_content">
+                <div class="header-inner_nav">
+                    <div class="mobile-nav" onclick="openMobileNav()">
+                      <i class="bx bx-menu"></i>
+                    </div>
+                    <div class="header-nav_left">
+                      <div class="main-logo">
+                        <a href="">
+                          <img src="./assets/img/logo.PNG" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="header-nav_right">
+                      <div class="nav-item">
+                        <a class="nav-item_link" href="../../index.html">Home</a>
+                      </div>
+                      <div class="nav-item">
+                        <a class="nav-item_link" href="../pages/filter.html">Beer</a>
+                        <ul class="nav-item_dropdown">
+                            <li><a href="../pages/filter.html">Popular Beer</a></li>
+                            <li><a href="../pages/filter.html">New Beer</a></li>
+                            <li><a href="../pages/filter.html">Hot Beer</a></li>
+                        </ul>
+                      </div>
+                      <div class="nav-item">
+                        <a class="nav-item_link" href="./views/pages/food.html">Food</a>
+                      </div>
+                      <div class="nav-item">
+                        <a class="nav-item_link" href="../../index.html">About</a>
+                      </div>
+                      <div class="nav-item">
+                        <a class="nav-item_link" href="../pages/contact.html">Contact</a>
+                      </div>
+                      <div class="close-mobile-nav" onclick="closeMobileNav()">
+                        <i class="bx bx-x"></i>
+                      </div>
+                    </div>
+                    <div class="header-nav_user">
+                      <a class="btn btn-login" href="../pages/login.html">
+                        <span class="user-icon"
+                          ><i class="bx bxs-user-circle"></i
+                        ></span>
+                        <span>Login</span>
+                      </a>
+                      <div class="favourite">
+                        <i class='bx bxs-heart-circle'></i>
+                        <div class="favourite-list">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- slider -->
+                <div class="filter-slider">
+                    <div class="filter-slider-top">
+                        <div class="filter-slider-image"></div>
+                        <div class="filter-slider-description"></div>
+                    </div>
+                    <div class="filter-slider-card">
+                        <div class="owl-carousel carousel-slider-card"></div>
+                    </div>
+                </div>   <!-- end slider -->
+            </div>
+            <!-- header-filter-bottom -->
+            <div class="header-filter-bottom">
+                <div class="header-bottom-icon icon-food">
+                    <span>
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                </div>
+                <div class="header-bottom-icon icon-drink">
+                    <span>
+                        <i class="fas fa-glass-cheers"></i>
+                    </span>
+                </div>
+                <div class="header-bottom-icon">
+                    <span>
+                        <i class='bx bxs-message-square'></i>
+                    </span>
+                </div>
+                <div class="header-bottom-icon">
+                    <span>
+                        <i class='bx bxs-user'></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../assets/js/filter.js"></script>
+<script src="../../assets/js/script.js"></script>
