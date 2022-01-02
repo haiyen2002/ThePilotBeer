@@ -62,9 +62,10 @@ function logOut(){
 
 //go to detail with heart
 function toDetail(id){
-  const currHref = window.location.href
+  const currHref = window.location.href;
+  let detail = window.location.href.replace('index.html','views/pages/detail.html');
   localStorage.setItem('detail',id);
   const currPath = currHref.substring(currHref.lastIndexOf('/') + 1);
-  currPath === 'index.html' ?  window.location.href = window.location.pathname.slice(0, window.location.pathname.length-11) + '/views/pages/detail.html'
+  currPath === 'index.html' ?  window.location.href = detail
                 : window.location.href = currHref.substr(0,currHref.lastIndexOf('/') + 1) + 'detail.html'
 }
