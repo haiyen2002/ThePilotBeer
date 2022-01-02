@@ -35,6 +35,11 @@ html {
 
 body {
     font-size: 1.4rem;
+    overflow-x: hidden;
+}
+
+.container {
+    overflow-x: hidden;
 }
 
 .grid-row {

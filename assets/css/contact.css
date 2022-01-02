@@ -222,6 +222,7 @@ textarea {
 .contact-more {
     display: flex;
     flex-wrap: wrap;
+    overflow-x: hidden;
 }
 
 .contact-map {
